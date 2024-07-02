@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     eyeOffIcon.addEventListener('click', function() {
         zoomImage.style.display = 'block';
-        cardContent.style.display = 'block';
+        cardContent.style.display = '';
         eyeIcon.style.display = 'block';
         eyeOffIcon.style.display = 'none';
     });

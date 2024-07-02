@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    flex-shrink: 0;
     border-radius: 32px;
     background: #FFF;
     box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.25)
@@ -29,6 +28,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 32px;
+    transition: height 0.3s ease, opacity 0.3s ease;
   }
   
   .card-image #zoomImage {
@@ -50,6 +50,9 @@ body {
   .card-content {
     background-color: #f9f9f9;
     width: 540px;
+    transition: height 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+    position: relative;
   }
 
   #eyeOff {
@@ -65,6 +68,7 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: #000;
+    transition: transform 0.3s ease;
   }
   
   .card-content p {
@@ -99,17 +103,20 @@ body {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
+    text-align: left;
 }
   
 .card-content button:hover span {
+    display: flex;
     transform: translateX(100%);
     justify-content: space-between;
+    text-align: left;
 }
   
 .card-content button::after {
     content: "\2192";
     position: absolute;
-    right: 10px;
+    right: 32px;
     top: 50%;
     transform: translateY(-50%);
     opacity: 0;
