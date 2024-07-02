@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    display: flex;
+    width: 600px;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: #FFF;
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.25)
+  }
+  
+  .card:hover #zoomImage {
+    transform: scale(1.2);
+    border-radius: 32px;
+  }
+  
+  .card-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+  
+  .card-image #zoomImage {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 32px;
+  }
+  
+  #eye {
+    position: fixed;
+    right: 700px;
+    top: 200px;
+    background-color: transparent;
+    border: none;
+    width: 48px;
+  }
+  
+  .card-content {
+    background-color: #f9f9f9;
+    width: 540px;
+  }
+
+  #eyeOff {
+    position: fixed;
+    right: 700px;
+    top: 350px;
+    background-color: transparent;
+    border: none;
+    width: 48px;
+  }
+  
+  .card-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .card-content p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .card-content button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 32px;
+    background-color: #007bff;
+    color: #fff;
+
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    width: 540px;
+    height: 68px;
+    border-radius: 16px;
+
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+.card-content button span {
+    position: absolute;
+    width: 540px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+  
+.card-content button:hover span {
+    transform: translateX(100%);
+    justify-content: space-between;
+}
+  
+.card-content button::after {
+    content: "\2192";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.card-content button:hover::after {
+    opacity: 1;
+}
